@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32811.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpeedConverter", "SpeedConverter\SpeedConverter.csproj", "{4A983F99-301E-4D54-95C0-F26F54AFCBF2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4A983F99-301E-4D54-95C0-F26F54AFCBF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A983F99-301E-4D54-95C0-F26F54AFCBF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A983F99-301E-4D54-95C0-F26F54AFCBF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A983F99-301E-4D54-95C0-F26F54AFCBF2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D0C7CF9A-0C35-48D5-B01A-49BEC31683C2}
+	EndGlobalSection
+EndGlobal
