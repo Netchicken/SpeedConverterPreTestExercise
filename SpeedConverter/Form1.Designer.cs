@@ -48,7 +48,7 @@
             outputListBox.ItemHeight = 15;
             outputListBox.Location = new Point(29, 147);
             outputListBox.Name = "outputListBox";
-            outputListBox.Size = new Size(344, 124);
+            outputListBox.Size = new Size(344, 334);
             outputListBox.TabIndex = 0;
             outputListBox.SelectedIndexChanged += outputListBox_SelectedIndexChanged;
             // 
@@ -157,7 +157,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSkyBlue;
-            ClientSize = new Size(398, 301);
+            ClientSize = new Size(395, 493);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);

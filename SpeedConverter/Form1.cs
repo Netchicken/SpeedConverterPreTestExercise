@@ -10,16 +10,16 @@ namespace SpeedConverter
         private void displayButton_Click(object sender, EventArgs e)
         {
             // Constants
-
             const double KPH_TO_MPH = 0.6214;
             const double MPH_TO_KPH = 1.60934;
 
             // Variables
-            double kph;        // Kilometers per hour
+            double kph;     // Kilometers per hour
             double mph;     // Miles per hour
-                            //  double speedCounter = 0;
 
-            double startSpeed = 0, endSpeed = 0, speedInterval = 0;
+
+            double startSpeed = 0, endSpeed = 0;
+            int speedInterval = 0;
 
             //input validation
             if ((double.TryParse(txtStartSpeed.Text, out startSpeed)))
@@ -39,14 +39,14 @@ namespace SpeedConverter
             {
                 MessageBox.Show("Invalid data in End Speed");
             }
-            //if ((double.TryParse(txtSpeedInterval.Text, out speedInterval)))
-            //{
-            //    double.TryParse(txtSpeedInterval.Text, out speedInterval);
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Invalid data in Speed Interval");
-            //}
+            if ((int.TryParse(txtSpeedInterval.Text, out speedInterval)))
+            {
+                int.TryParse(txtSpeedInterval.Text, out speedInterval);
+            }
+            else
+            {
+                MessageBox.Show("Invalid data in Speed Interval");
+            }
 
 
             if (rbKphToMph.Checked)
@@ -54,7 +54,7 @@ namespace SpeedConverter
 
 
                 // Display the table of speeds.
-                for (int i = (int)startSpeed; i <= endSpeed; i++)
+                for (int i = (int)startSpeed; i <= endSpeed; i+= speedInterval)
                 {
                     // Calculate miles per hour.
                     mph = i * KPH_TO_MPH;
@@ -69,7 +69,7 @@ namespace SpeedConverter
             if (rbMphToKph.Checked)
             {
                 // Display the speed table.
-                for (int i = (int)startSpeed; i <= endSpeed; i++)
+                for (int i = (int)startSpeed; i <= endSpeed; i+= speedInterval)
                 {
                     // Calculate miles per hour.
                     kph = i * MPH_TO_KPH;
