@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             outputListBox = new ListBox();
-            displayButton = new Button();
-            exitButton = new Button();
+            btnDisplaySpeed = new Button();
+            btnExit = new Button();
             rbKphToMph = new RadioButton();
             rbMphToKph = new RadioButton();
             label1 = new Label();
@@ -50,26 +50,27 @@
             outputListBox.Name = "outputListBox";
             outputListBox.Size = new Size(344, 124);
             outputListBox.TabIndex = 0;
+            outputListBox.SelectedIndexChanged += outputListBox_SelectedIndexChanged;
             // 
-            // displayButton
+            // btnDisplaySpeed
             // 
-            displayButton.Location = new Point(292, 24);
-            displayButton.Name = "displayButton";
-            displayButton.Size = new Size(81, 54);
-            displayButton.TabIndex = 1;
-            displayButton.Text = "Display Speeds";
-            displayButton.UseVisualStyleBackColor = true;
-            displayButton.Click += displayButton_Click;
+            btnDisplaySpeed.Location = new Point(292, 24);
+            btnDisplaySpeed.Name = "btnDisplaySpeed";
+            btnDisplaySpeed.Size = new Size(81, 54);
+            btnDisplaySpeed.TabIndex = 1;
+            btnDisplaySpeed.Text = "Display Speeds";
+            btnDisplaySpeed.UseVisualStyleBackColor = true;
+            btnDisplaySpeed.Click += displayButton_Click;
             // 
-            // exitButton
+            // btnExit
             // 
-            exitButton.Location = new Point(292, 89);
-            exitButton.Name = "exitButton";
-            exitButton.Size = new Size(81, 53);
-            exitButton.TabIndex = 2;
-            exitButton.Text = "Exit";
-            exitButton.UseVisualStyleBackColor = true;
-            exitButton.Click += exitButton_Click;
+            btnExit.Location = new Point(292, 89);
+            btnExit.Name = "btnExit";
+            btnExit.Size = new Size(81, 53);
+            btnExit.TabIndex = 2;
+            btnExit.Text = "Exit";
+            btnExit.UseVisualStyleBackColor = true;
+            btnExit.Click += exitButton_Click;
             // 
             // rbKphToMph
             // 
@@ -166,8 +167,8 @@
             Controls.Add(label1);
             Controls.Add(rbMphToKph);
             Controls.Add(rbKphToMph);
-            Controls.Add(exitButton);
-            Controls.Add(displayButton);
+            Controls.Add(btnExit);
+            Controls.Add(btnDisplaySpeed);
             Controls.Add(outputListBox);
             Name = "Form1";
             Text = "Speed Converter";
@@ -179,8 +180,8 @@
         #endregion
 
         private ListBox outputListBox;
-        private Button displayButton;
-        private Button exitButton;
+        private Button btnDisplaySpeed;
+        private Button btnExit;
         private RadioButton rbKphToMph;
         private RadioButton rbMphToKph;
         private Label label1;
